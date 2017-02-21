@@ -16,8 +16,8 @@ var SongQueue = Backbone.Collection.extend({
       }  
     });
     // where do we get song from ??
-    this.on('dequeue', function() {
-      this.remove(this.at(0));
+    this.on('dequeue', function(song) {
+      this.remove(song);
     });
   },
   
